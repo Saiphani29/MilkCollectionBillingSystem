@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div class="content">
+       <div class="cards">
+           <div class="card">
+               <div class="box">
+                   <h2>{{nousers[0]["count(*)"]}}</h2>
+                   <h4 class="mi">No of sellers</h4>
+               </div>
+               <div class="icon-case">
+                   <img src="../../../assets/mem.png" width="85px">
+               </div>
+           </div>
+           <div class="card">
+               <div class="box">
+                   <h2 class="pr">₹{{milkprice[0]["max(price)"]}}</h2>
+                   <h4 class="red">Milk price</h4>
+               </div>
+               <div class="icon-case">
+                   <img src="../../../assets/milkl.jpeg" width="85px">
+               </div>
+           </div>
+           <div class="card">
+               <div class="box">
+                   <h3>{{totalmilk[0]["sum(quantity)"]}}Lrs</h3>
+                   <p>Total milk</p>
+               </div>
+               <div class="icon-case">
+                   <img src="../../../assets/ml.jpeg" width="85px">
+               </div>
+                
+           </div>
+          
+           <div class="card">
+               <div class="box">
+                   <h2 class="am">₹{{amount[0]["sum(Amount)"]}}</h2>
+                   <h4 class="pm">Amount</h4> 
+               </div>
+               <div class="icon-case">
+                   <img src="../../../assets/r.jpeg" width="85px">
+               </div>
+           </div>
+           
+           
+       </div>
+   </div>
+   <div class="logo">
+       <img src="../../../assets/logo.png" width="350px" height="300px">
+   </div>
+</body>
+</html>
+

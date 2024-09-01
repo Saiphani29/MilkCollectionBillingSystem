@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Add Seller</div>
+        <form [formGroup]="sellerdata" (ngSubmit)="reg(sellerdata.value)">
+            <div class="user">
+                <div class="input">
+                    <span class="details">FullName</span>
+                    <input type="text" placeholder="Enter name" name="Fullname" formControlName="name" required>
+                    <div class="warn" *ngIf="sellerdata.controls['name'].touched && sellerdata.controls['name'].hasError('required')">
+                        **Name must be required</div>
+                </div>
+                <div class="input">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter Email" name="Email" formControlName="email" required>
+                    <div class="warn" *ngIf="sellerdata.controls['email'].touched && sellerdata.controls['email'].hasError('required')">
+                        ** Email must be required</div>
+                        <div class="warn" *ngIf="sellerdata.controls['email'].touched && sellerdata.controls['email'].hasError('email')">
+                            ** Email must be in format</div>
+                </div>
+              
+                <div class="input">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter password" name="pass" formControlName="password" required>
+                    <div class="warn" *ngIf="sellerdata.controls['password'].touched && sellerdata.controls['password'].hasError('minlength')">
+                        password min length 8 characters</div>
+                        <div class="warn" *ngIf="sellerdata.controls['password'].touched && sellerdata.controls['password'].hasError('required')">
+                           ** password must be required</div>
+                </div>
+                <div class="input">
+                    <span class="details">Usercode</span>
+                    <input type="text" placeholder="usercode" name="usercode" formControlName="usercode" required>
+                    <div class="warn" *ngIf="sellerdata.controls['usercode'].touched && sellerdata.controls['usercode'].hasError('required')">
+                        **usercode must be required</div>
+                </div>
+                <div class="input">
+                    <span class="details">phonenumber</span>
+                    <input type="text" placeholder="phonenumber" name="phno" formControlName="phoneno" required>
+                    <div class="warn" *ngIf="sellerdata.controls['phoneno'].touched && sellerdata.controls['phoneno'].hasError('minlength')">
+                        phno min length 10 characters</div>
+                        <div class="warn" *ngIf="sellerdata.controls['phoneno'].touched && sellerdata.controls['phoneno'].hasError('required')">
+                            phno must be required</div>
+                </div>
+                <div class="input">
+                    <span class="details">street</span>
+                    <input type="text" placeholder="street" name="street" formControlName="street" required>
+                </div>
+                <div class="input">
+                    <span class="details">Village</span>
+                    <input type=" text" placeholder="village" name="Village" formControlName="village" required>
+                </div>
+                <div class="input">
+                    <span class="details">Mandal</span>
+                    <input type=" text" placeholder="mandal" name="mandal" formControlName="mandal" required>
+                </div>
+                <div class="input">
+                    <span class="details">city</span>
+                    <input type="text" placeholder="District" name="District" formControlName="District" required>
+                </div>
+                <div class="input">
+                    <span class="details"> State</span>
+                    <input type=" text" placeholder="State" name="State" formControlName="state" required>
+                </div>
+                <div class="input">
+                    <span class="details">Zipcode</span>
+                    <input type=" text" placeholder="zipcode" name="Zipcode" formControlName="zipcode" required>
+                </div>
+                <div class="datereg">
+                    <label>Register</label>
+                    <input type="date" formControlName="RegisterDate">
+                </div>
+                <div class="genreg">
+                    <div class="gender-details">
+                        <label class="ab">Gender</label> <br>
+                        <input type="radio" name="gender" value="male" formControlName="gender">Male
+                        <input type="radio" name="gender" value="female" formControlName="gender">Female
+                        <input type="radio" name="gender" value="other" formControlName="gender">Other
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Add Seller">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

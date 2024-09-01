@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+     background-image: url('../../../assets/dp.webp');
+    height:90vh;
+}
+.bg{
+    display:flex;
+    height:40vh;
+    position:relative;
+    transform: translate(-3%,55%);
+    width:900px;
+    border-radius:15px;
+    padding:35px;
+    justify-content: space-between;
+    
+}
+.abc{
+    height:150px;
+    width:250px;
+    background-color:aliceblue;
+    position: relative;
+    box-shadow:0 3px 2px 2px white;
+}
+.abc2{
+    height:150px;
+    width:250px;
+    background-color: rgb(226, 226, 226);
+    position: relative;
+    box-shadow:0 3px 2px 2px  rgb(226, 226, 226);
+}
+.abc3{
+    height:150px;
+    width:250px;
+    background-color: rgb(175, 255, 255);
+    position: relative;
+    box-shadow:0 3px 2px 2px rgb(175, 255, 255);
+}
+.abc4{
+    height:150px;
+    width:250px;
+    background-color: rgb(114, 117, 117);
+    position: relative;
+    box-shadow:0 3px 2px 1px rgb(114, 117, 117);
+}
+.abc p{
+     margin:50px 60px;
+     font-weight: bold;
+     font-size:25px;
+
+}
+.abc span{
+    font-weight: bold;
+    position:absolute;
+    margin-top: -20px;
+    font-size: 20px;
+
+}
+.abc2 p{
+    margin:50px 60px;
+    font-weight: bold;
+    font-size:25px;
+
+}
+.abc2 span{
+   font-weight: bold;
+   position:absolute;
+   margin-top: -20px;
+   font-size: 20px;
+
+}
+.abc3 p{
+    margin:50px 60px;
+    font-weight: bold;
+    font-size:25px;
+
+}
+.abc3 span{
+   font-weight: bold;
+   position:absolute;
+   margin-top: -20px;
+   font-size: 20px;
+
+}
+.abc4 p{
+    margin:50px 60px;
+    font-weight: bold;
+    font-size:25px;
+
+}
+.abc4 span{
+   font-weight: bold;
+   position:absolute;
+   margin-top: -20px;
+   font-size: 20px;
+
+}

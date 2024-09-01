@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <h3>Welcome {{get()}}</h3>
+        <button  type="submit"  (click)="action()" class="abc"> Logout</button>
+       <div class="navbar">
+        <ul>
+            <li><a routerLink="/selldash/home3">Dashboard</a></li>
+            <li><a routerLink="/selldash/records">Milkrecords</a></li>
+            <li><a routerLink="/selldash/payments">Payments</a></li>
+            <li><a routerLink="/selldash/profiles">Profile</a></li>
+        </ul>
+       </div>
+        
+   </div>
+     
+    
+    
+</body>
+</html>
+<div class="info">
+<router-outlet></router-outlet>
+</div>

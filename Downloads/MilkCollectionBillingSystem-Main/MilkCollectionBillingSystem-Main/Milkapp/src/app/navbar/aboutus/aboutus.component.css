@@ -1,0 +1,59 @@
+body{
+    background: linear-gradient(45deg , #7a7ea2, #0c6bbd);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+ 
+.main {
+   margin: 20px auto; /* Center the main content within the page */
+   max-width: 800px; /* Adjust the max-width as needed */
+}
+.about{
+    padding-top: 6px;
+    text-align: center;
+    color:antiquewhite;
+ }
+ .content{
+    border:2px dashed  salmon;
+    color: aliceblue;
+ }
+ .img{
+    padding:3px;
+
+    
+ }
+ .il{
+    margin-left: 5px;
+ }
+ article{
+    color: aliceblue;
+    
+ }
+ section {
+   text-align: left; /* Align section content to the left */
+   margin-bottom: 30px;
+}
+ 
+.border-container {
+   display: flex; 
+   border: white; 
+   height: 300px;  
+   justify-content: center; 
+   align-items: center;  
+   text-align: justify;
+   color: aliceblue;
+}
+
+.border {
+   width: 50%; /* Divide the container into two equal halves */
+   text-align: center; /* Center the text horizontally */
+}
+
+.border:hover{
+   background: linear-gradient(45deg , #da4d83, #87b2d8);
+   color: aliceblue;
+   font-weight: bold;
+}

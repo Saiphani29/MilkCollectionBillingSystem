@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(81, 71, 58);
+    
+}
+section{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background: url("../../../assets/h.jpg");
+    background-size:cover;
+    background-position: center;
+}
+.form-containers{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    width:380px;
+    padding:50px 30px;
+    border-radius: 10px;
+    box-shadow:7px 7px 60px rgba(14, 168, 179, 0.799);
+} 
+h1{
+    text-transform: uppercase;
+    font-size:26px;
+    text-align: center;
+    margin-bottom:25px;
+    color: aqua;
+
+}
+.control label{
+    color:rgb(0, 255, 200);
+
+}
+.control input{
+    width:100%;
+    padding:8px;
+    color:rgb(12, 2, 2);
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin:10px 0px; 
+    background-color:whitesmoke;
+    font-weight: bold;
+}
+.btn{
+     
+    background-color: rgb(12, 240, 240);
+    text-transform: uppercase;
+    color: rgba(234, 97, 18, 0.934);
+    font-size:21px;
+    width:100%;
+    padding:4px;
+    position: relative;
+    margin-top:17px;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+}
+.btn:hover{
+    color:antiquewhite;
+    
+}
+.form-containers span label{
+    margin-top: 12px;
+    color: rgb(13, 223, 213);
+}
+.form-containers .abc{
+    font-size: 50px;
+    margin-left:130px;
+     
+}
+ 

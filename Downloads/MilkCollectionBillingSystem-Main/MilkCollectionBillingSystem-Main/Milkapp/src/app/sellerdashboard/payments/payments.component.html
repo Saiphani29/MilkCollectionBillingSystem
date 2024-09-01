@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="display2"  >
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sno</th>
+                <th scope="col">Usercode</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of records;index as h">
+                    <th scope="row">{{(h+1)}}</th>
+                    <td>{{data.usercode}}</td>
+                    <td>{{data.date | date}}</td>
+                    <td>{{data.amount}}</td>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
