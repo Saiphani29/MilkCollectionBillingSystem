@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="header">
+        <span><b>Milk Collection And Billing System</b></span>
+        <span class="admin"><h3>Welcome {{getname()}}</h3></span>
+        <button  type="submit"  (click)="action()" class="btn  abc"> Logout</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a routerLink="/dashboard/home2">Dashboard</a></li>
+                <li><a  routerLink="/dashboard/sellereg">Addseller</a></li>
+                <li><a routerLink="/dashboard/sellerlist">SellersList</a></li>
+                <li><a routerLink="/dashboard/milkcollection">MilkCollection</a></li>
+                <li><a routerLink="/dashboard/milksub">MilkCollectionList</a></li>
+                <li><a routerLink="/dashboard/ratechart">RateChart</a></li>
+                <li><a routerLink="/dashboard/billGenerate">BillGeneration</a></li>
+                <li><a routerLink="/dashboard/payment">Payment Info</a></li>
+                <li><a routerLink="/dashboard/enquiry">Enquiry</a></li>
+                <li><a routerLink="/dashboard/profile">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="test">
+        <router-outlet></router-outlet>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height:110vh;
+    justify-content: center;
+    align-items:center;
+}
+.container{
+    max-width:800px;
+    transform: translate(0,-15%);
+    padding:25px 30px;
+    border-radius:5px;
+    margin-left:115px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+ .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+    background: #9b59b6;
+}
+.container form .user{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+form .user .input{
+    margin-bottom: 15px;
+    width: max-content;
+}
+.user .input .details{
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user .input input{
+      height: 45px;
+      width: 100%;
+      outline:none;
+      border-radius: 5px;
+      border:1px solid #ccc;
+      padding-left: 15px;
+      font-size: 16px;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;
+}
+.user .input input:focus,.user .input input:valid{
+    border-color: #9b59b6;
+}
+ 
+form .gender-details .ab{
+    font-weight: 500;margin-right:5px;
+
+}
+form .gender-details{
+    display:flex;
+    width: 80%;
+    margin: 14px 6px;
+    justify-content: space-between;
+}
+.gender-details input{
+    margin:5px;
+}
+.genreg{
+    display: flex;
+}
+ 
+form .button input{
+    margin-top: 20px;
+    padding:2px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight:500;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#0f75b9,#a309e0);
+}
+form .button input:hover{
+    background: linear-gradient(135deg,#71b7e6,#5c0a7c);
+   
+    color: rgb(2, 2, 16);
+}
+.reg a{
+    color: rgb(24, 16, 16);
+}
+.reg a:hover{
+    color: rgb(250, 16, 16);
+}
+@media(max-width:584px){
+    .container{
+        max-width:100%;}
+        form .user .input{
+            margin-bottom: 15px;
+        width: 100%;}
+        form .gender-details .category{
+            width: 100%;}
+            .container form .user{
+                max-height: 300px;
+                overflow-y: scroll;
+            }
+
+} 
+.btn2{
+    float: right;
+    margin-top: -16px;
+    margin-right: -6px;
+}

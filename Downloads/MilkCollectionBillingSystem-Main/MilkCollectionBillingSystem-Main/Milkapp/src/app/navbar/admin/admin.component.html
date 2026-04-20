@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+   <section>
+       <div class="form-containers">
+           <i class="fa fa-user-circle abc"  aria-hidden="true"></i>
+           <h1>admin login</h1>
+           <form  [formGroup]="formdata" (ngSubmit)="log(formdata.value)" >
+               <div class="control">
+                   <label>UserName</label>
+                   <input type="text" name="user"  formControlName="username" required >
+               </div>
+               <div class="control">
+                   <label>Password</label>
+                   <input type="password" name="pass" formControlName="password" required>
+                  
+               </div>
+               <span>
+                   <input type="checkbox"> <label>Remember Me</label>
+               </span>
+               <div class="control ">
+                   <button  class="btn">Login</button>
+               </div>
+           </form>
+       </div>
+   </section>
+</body>
+</html>

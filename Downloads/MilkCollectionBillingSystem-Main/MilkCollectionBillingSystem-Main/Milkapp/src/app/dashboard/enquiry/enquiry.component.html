@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <div class="img">
+       <img  src="../../../assets/enquiry-4.png">
+   </div>
+      <div class="details">
+     <div class="table-responsive">
+         <table class="table table-striped">
+             <thead class="thead-dark">
+                 <tr>
+                     <th scope="col">Sno</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Email</th>
+                     <th scope="col">Subject</th>
+                     <th scope="col">Message</th>    
+                 </tr>
+             </thead>
+             <tbody>
+                  <tr *ngFor="let enq of alldetails;index as j">
+                  <th scope="row">{{(j+1)}}</th>
+                  <th scope="row">{{enq.name}}</th>
+                  <th scope="row">{{enq.email}}</th>
+                  <th scope="row">{{enq.subject}}</th>
+                  <th scope="row">{{enq.message}}</th>
+                  </tr>
+                  </tbody>
+ </table>
+ </div>
+ </div>
+ </body>
+</html>

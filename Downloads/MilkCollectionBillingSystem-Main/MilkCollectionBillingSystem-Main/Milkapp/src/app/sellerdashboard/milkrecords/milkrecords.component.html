@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="display">
+        <div class="table-responsive">
+            <table class="table"> 
+                <thead >
+                    <tr>
+                        <th scope="col">Sno</th>
+                        <th scope="col">Usercode</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Timings</th>
+                        <th scope="col">MilkType</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Fat</th>
+                        <th scope="col">Snf</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr *ngFor="let milk of milkdetails;index as j">
+                     <th scope="row">{{(j+1)}}</th>
+                     <td>{{milk.usercode}}</td>
+                     <td>{{milk.date |date}}</td>
+                     <td>{{milk.timings}}</td>
+                     <td>{{milk.milktype}}</td>
+                     <td>{{milk.quantity}}</td>
+                     <td>{{milk.snf}}</td>
+                     <td>{{milk.fat}}</td>
+                     <td>{{milk.price}}</td>
+                     <td>{{milk.Amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

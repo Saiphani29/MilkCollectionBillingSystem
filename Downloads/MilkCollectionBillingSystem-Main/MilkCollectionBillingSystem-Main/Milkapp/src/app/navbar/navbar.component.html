@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contains">
+        <div class="row">
+            <div class="col-xl-4">
+                <b>Milk Collection And Billing System</b>
+            </div>
+            <div class="container-fluid col-xl-7">
+                <ul>
+                    <li><a routerLink="/navbar/home" routerLinkActive="active">Home</a></li>
+                    <li><a routerLink="/navbar/admin" routerLinkActive="active">Admin</a></li>
+                    <li><a routerLink="/navbar/seller" routerLinkActive="active">Seller</a></li>
+                    <li><a routerLink="/navbar/about" routerLinkActive="active">Aboutus</a></li>
+                    <li><a routerLink="/navbar/contact" routerLinkActive="active">Contactus</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="test1">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</body>
+</html>

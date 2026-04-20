@@ -1,0 +1,82 @@
+body{
+    background-color: #FFDCB6;
+    height:100vh;
+}
+ 
+.content{
+    min-height: 90vh ;
+    margin-top:40px;
+    position:fixed;
+   
+}
+.content .cards{
+    padding:10px;
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  
+  } 
+.content .cards .card{
+    width:250px;
+    height:150px;
+    background: white;
+    margin:30px 50px;
+    align-items:center;
+    justify-content:space-around;
+    box-shadow:0px 3px 5px 3px rgba(0,0,0,0.2); 
+}
+.icon-case{
+    margin-left:150px;
+    margin-top:-170px;
+    border-radius: 15px;
+}
+ 
+.box p{
+    font-size:23px;
+    font-weight:600;
+    margin-left: -100px;
+    margin-top:30px;
+}
+.box h3{
+    margin-top:20px;
+    margin-left:-20px;
+}
+.box h2{
+    margin-left:-40px;
+    position: relative;
+}
+.mi{
+    position: relative;
+    margin-left: -90px;
+    margin-top:25px;
+     
+}
+.red{
+    position: relative;
+    margin-left:-100px;
+    margin-top:32px;
+}
+.box .pr{
+    position: relative;
+    margin-left:-80px;
+}
+#milk{
+    position: relative;
+    margin-top:-16px;
+    margin-left:-18px;
+}
+ 
+.box .am{
+    margin-left:-70px;
+}
+.box .pm{
+    margin-left:-80px;
+    margin-top: 30px;
+} 
+.logo{
+    position:fixed;
+    margin-left:700px;
+    padding-top:100px;
+}
+ 

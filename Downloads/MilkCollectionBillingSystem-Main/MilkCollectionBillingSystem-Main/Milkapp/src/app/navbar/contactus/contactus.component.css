@@ -1,0 +1,12 @@
+body{
+  background-color: rgba(47, 30, 30, 0.557);
+}
+.contactForm{
+  border:8px solid rgba(0, 0, 0, 0.481);
+  padding: 12px 13px;
+  
+}
+.contact-wrap{
+  border:8px solid wheat;
+  background-color: aliceblue;
+}

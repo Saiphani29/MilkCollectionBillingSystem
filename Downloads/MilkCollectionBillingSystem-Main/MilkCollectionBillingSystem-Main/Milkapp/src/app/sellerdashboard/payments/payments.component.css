@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+     background-image:url('../../../assets/pay.webp');
+     background-size: cover;
+     height: 90vh;
+
+
+}
+.display2{
+   width: max-content;
+   margin-left: 600px;
+   background-color: azure;
+transform: translate(70%,40%);
+
+
+}
+.table{
+    border: 2px solid;
+}
