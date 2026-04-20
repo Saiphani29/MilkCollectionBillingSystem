@@ -48,8 +48,8 @@ const AdminDashboard = () => {
       try {
         console.log('Fetching dashboard data...');
         const [sellersRes, milkRes] = await Promise.all([
-          api.get('sellers/list'),
-          api.get('milk/list')
+          api.get('/sellers/list'),
+          api.get('/milk/list')
         ]);
 
         console.log('Sellers count:', sellersRes.data.length);

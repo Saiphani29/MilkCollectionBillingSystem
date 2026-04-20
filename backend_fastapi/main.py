@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import create_db_and_tables
@@ -5,10 +6,13 @@ from routers import auth, sellers, milk, payments
 
 app = FastAPI(title="Milk Collection Billing System API")
 
-# CORS middleware for React frontend
+# Configure allowed origins for production
+# In Vercel/Render, set ALLOWED_ORIGINS=https://your-app.vercel.app
+origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust in production
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

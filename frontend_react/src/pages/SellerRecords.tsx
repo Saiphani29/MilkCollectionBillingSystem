@@ -11,7 +11,7 @@ const SellerRecords = () => {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await api.get('milk/list');
+        const response = await api.get('/milk/list');
         // Filter records for this seller
         const userRecords = response.data.filter((r: any) => r.usercode === user.username);
         setRecords(userRecords.reverse());

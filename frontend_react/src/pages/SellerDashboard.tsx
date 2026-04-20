@@ -25,8 +25,8 @@ const SellerDashboard = () => {
     const fetchSellerData = async () => {
       try {
         const [milkRes, payRes] = await Promise.all([
-          api.get('milk/list'),
-          api.get(`payments/user/${user.username}`)
+          api.get('/milk/list'),
+          api.get(`/payments/user/${user.username}`)
         ]);
 
         const myMilk = milkRes.data.filter((r: any) => r.usercode === user.username);

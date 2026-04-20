@@ -20,7 +20,7 @@ const SellerList = () => {
   useEffect(() => {
     const fetchSellers = async () => {
       try {
-        const response = await api.get('sellers/list');
+        const response = await api.get('/sellers/list');
         setSellers(response.data);
       } catch (error) {
         console.error('Error fetching sellers:', error);

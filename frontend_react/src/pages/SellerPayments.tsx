@@ -11,7 +11,7 @@ const SellerPayments = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await api.get(`payments/user/${user.username}`);
+        const response = await api.get(`/payments/user/${user.username}`);
         if (response.data.submit) {
           setPayments(response.data.paydetails.reverse());
         }
