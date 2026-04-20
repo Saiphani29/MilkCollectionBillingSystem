@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #f8fafc;
+  --accent: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --bg-main: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --sidebar-bg: #1e293b;
+  --sidebar-text: #f8fafc;
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* Custom Component Classes */
+@layer components {
+  .premium-card {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20;
+  }
+}
