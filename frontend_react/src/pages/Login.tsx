@@ -11,12 +11,23 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate login for now
+    // Simulate login for now - store in localStorage for persistence
+    const user = {
+      username: userId,
+      role: isAdmin ? 'admin' : 'seller',
+      name: isAdmin ? 'System Admin' : 'Dairy Farmer'
+    };
+
     if (isAdmin) {
       if (userId === 'admin' && password === 'admin') {
+        localStorage.setItem('user', JSON.stringify(user));
         navigate('/admin/dashboard');
+      } else {
+        alert('Invalid admin credentials');
       }
     } else {
+      // For sellers, we'll allow any code for this demo, or check seeded data
+      localStorage.setItem('user', JSON.stringify(user));
       navigate('/seller/dashboard');
     }
   };

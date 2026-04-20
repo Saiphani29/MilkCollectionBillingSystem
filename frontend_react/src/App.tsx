@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import Layout from './components/Layout';
 import AdminDashboard from './pages/AdminDashboard';
 import SellerDashboard from './pages/SellerDashboard';
+import SellerRecords from './pages/SellerRecords';
+import SellerPayments from './pages/SellerPayments';
 import MilkCollection from './pages/MilkCollection';
 import BillGeneration from './pages/BillGeneration';
 import SellerList from './pages/SellerList';
@@ -31,8 +33,8 @@ function App() {
         {/* Seller Routes */}
         <Route path="/seller" element={<Layout isAdmin={false} />}>
           <Route path="dashboard" element={<SellerDashboard />} />
-          <Route path="records" element={<div>Milk Records Page</div>} />
-          <Route path="payments" element={<div>Payments Page</div>} />
+          <Route path="records" element={<SellerRecords />} />
+          <Route path="payments" element={<SellerPayments />} />
           <Route path="profile" element={<UserProfile isAdmin={false} />} />
         </Route>
 

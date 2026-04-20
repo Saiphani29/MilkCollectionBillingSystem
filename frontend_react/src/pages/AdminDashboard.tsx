@@ -46,14 +46,18 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
+        console.log('Fetching dashboard data...');
         const [sellersRes, milkRes] = await Promise.all([
-          api.get('/sellers/list'),
-          api.get('/milk/list')
+          api.get('sellers/list'),
+          api.get('milk/list')
         ]);
+
+        console.log('Sellers count:', sellersRes.data.length);
+        console.log('Milk records:', milkRes.data.length);
 
         const sellersCount = sellersRes.data.length;
         const totalLiters = milkRes.data.reduce((acc: number, curr: any) => acc + curr.quantity, 0);
-        const revenue = milkRes.data.reduce((acc: number, curr: any) => acc + curr.Amount, 0);
+        const revenue = milkRes.data.reduce((acc: number, curr: any) => acc + (curr.Amount || 0), 0);
 
         setStats({
           totalSellers: sellersCount,
@@ -96,30 +100,21 @@ const AdminDashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard 
-          title="Total Sellers" 
-          value={stats.totalSellers.toString()} 
-          icon={Users} 
-          color="bg-blue-500" 
-        />
-        <StatCard 
-          title="Total Milk (Liters)" 
-          value={stats.totalLiters.toFixed(1)} 
-          icon={Milk} 
-          color="bg-emerald-500" 
-        />
-        <StatCard 
-          title="Total Revenue" 
-          value={`₹ ${stats.todayRevenue.toLocaleString()}`} 
-          icon={TrendingUp} 
-          color="bg-amber-500" 
-        />
-        <StatCard 
-          title="Pending Payments" 
-          value="₹ 0" 
-          icon={TrendingUp} 
-          color="bg-rose-500" 
-        />
+        {[
+          { title: "Total Sellers", value: stats.totalSellers.toString(), icon: Users, color: "bg-blue-500" },
+          { title: "Total Milk (Liters)", value: stats.totalLiters.toFixed(1), icon: Milk, color: "bg-emerald-500" },
+          { title: "Total Revenue", value: `₹ ${stats.todayRevenue.toLocaleString()}`, icon: TrendingUp, color: "bg-amber-500" },
+          { title: "Pending Payments", value: "₹ 0", icon: TrendingUp, color: "bg-rose-500" }
+        ].map((item, i) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <StatCard {...item} />
+          </motion.div>
+        ))}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

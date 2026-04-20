@@ -51,6 +51,11 @@
   }
 
   .glass {
-    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20;
+    @apply bg-white/40 dark:bg-slate-900/40 backdrop-blur-xl border border-white/20 shadow-xl;
   }
+
+  .sidebar {
+    @apply bg-slate-900/80 backdrop-blur-2xl border-r border-white/5;
+  }
+
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Home, 
   Users, 
@@ -29,34 +30,48 @@ const Sidebar = ({ isAdmin }: { isAdmin: boolean }) => {
   ];
 
   return (
-    <div className="sidebar w-64 h-screen bg-slate-900 text-slate-100 flex flex-col p-4 fixed left-0 top-0">
+    <div className="sidebar w-64 h-screen text-slate-100 flex flex-col p-4 fixed left-0 top-0 z-50">
       <div className="mb-8 p-2">
-        <h1 className="text-2xl font-bold gradient-text">DairySoft Pro</h1>
-        <p className="text-xs text-slate-400 mt-1">Milk Management System</p>
+        <h1 className="text-2xl font-bold gradient-text tracking-tight">DairySoft Pro</h1>
+        <p className="text-xs text-slate-400 mt-1 uppercase tracking-widest font-semibold">Management System</p>
       </div>
 
       <nav className="flex-1 space-y-2">
-        {menuItems.map((item) => (
-          <NavLink
+        {menuItems.map((item, i) => (
+          <motion.div
             key={item.path}
-            to={item.path}
-            className={({ isActive }) => 
-              `flex items-center justify-between p-3 rounded-lg transition-all ${
-                isActive ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/20' : 'hover:bg-slate-800 text-slate-400'
-              }`
-            }
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: i * 0.05 }}
           >
-            <div className="flex items-center gap-3">
-              <item.icon size={20} />
-              <span className="font-medium">{item.name}</span>
-            </div>
-            <ChevronRight size={16} />
-          </NavLink>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) => 
+                `flex items-center justify-between p-3 rounded-xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-blue-600/90 text-white shadow-lg shadow-blue-600/20' 
+                    : 'hover:bg-white/10 text-slate-400 hover:text-white'
+                }`
+              }
+            >
+              <div className="flex items-center gap-3">
+                <item.icon size={20} />
+                <span className="font-medium">{item.name}</span>
+              </div>
+              <ChevronRight size={16} className="opacity-50" />
+            </NavLink>
+          </motion.div>
         ))}
       </nav>
 
       <div className="mt-auto p-2 border-t border-slate-800 pt-4">
-        <button className="flex items-center gap-3 text-slate-400 hover:text-red-400 w-full transition-colors">
+        <button 
+          onClick={() => {
+            localStorage.removeItem('user');
+            window.location.href = '/login';
+          }}
+          className="flex items-center gap-3 text-slate-400 hover:text-red-400 w-full transition-colors p-2"
+        >
           <LogOut size={20} />
           <span className="font-medium">Logout</span>
         </button>

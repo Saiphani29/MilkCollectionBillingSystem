@@ -14,10 +14,14 @@ class PaymentRequest(BaseModel):
 
 @router.post("/add")
 def add_payment(req: PaymentRequest, session: Session = Depends(get_session)):
-    # Original logic checks if user exists in milkcollection
-    exists = session.exec(select(MilkCollection).where(MilkCollection.usercode == req.usercode, MilkCollection.username == req.username)).first()
-    if not exists:
-        return {"submit": False, "message": "User not found in collection records"}
+    if req.Amount <= 0:
+        return {"submit": False, "message": "Payment amount must be greater than zero"}
+
+    # Ensure seller exists
+    from models import Seller
+    seller = session.exec(select(Seller).where(Seller.usercode == req.usercode)).first()
+    if not seller:
+        return {"submit": False, "message": "Seller not found in database"}
     
     payment = Payment(
         usercode=req.usercode,
