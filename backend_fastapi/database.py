@@ -9,12 +9,12 @@ MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
 MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
 MYSQL_DB = os.getenv("MYSQL_DB", "test")
 
-# Use DATABASE_URL from .env (for Neon/Supabase) or fallback to local SQLite
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./database.db")
+# Use DATABASE_URL from .env (for Neon/Supabase) or fallback to a writable location on Render
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:////tmp/database.db")
 
 # SQLite needs 'check_same_thread=False' to work with FastAPI
 if DATABASE_URL.startswith("sqlite"):
-    engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False}, echo=True)
+    engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 else:
     engine = create_engine(DATABASE_URL, echo=True)
 

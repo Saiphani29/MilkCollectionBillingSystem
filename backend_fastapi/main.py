@@ -20,7 +20,14 @@ app.add_middleware(
 
 @app.on_event("startup")
 def on_startup():
-    create_db_and_tables()
+    try:
+        print("Starting up: Creating database and tables...")
+        create_db_and_tables()
+        print("Startup complete: Database is ready.")
+    except Exception as e:
+        print(f"CRITICAL ERROR during startup: {e}")
+        # We don't want to raise here because it might stop the server from even starting
+        # Render will show 503 if the process exits. We want it to stay alive so we can see logs.
 
 @app.get("/")
 def read_root():
