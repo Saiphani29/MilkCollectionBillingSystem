@@ -2,10 +2,8 @@ fastapi
 uvicorn[standard]
 gunicorn
 sqlmodel
-psycopg2-binary
 cryptography
 python-multipart
 passlib[argon2]
 python-jose[cryptography]
 python-dotenv
-cors

@@ -31,7 +31,11 @@ def on_startup():
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Milk Collection Billing System API"}
+    return {"status": "online", "message": "Milk Collection API is running"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
 
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 app.include_router(sellers.router, prefix="/sellers", tags=["Sellers"])
