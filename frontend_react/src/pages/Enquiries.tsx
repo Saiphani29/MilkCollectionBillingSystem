@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, User, Clock, MessageSquare, Reply, Trash2, CheckCircle } from 'lucide-react';
+import { User, Clock, Reply, Trash2, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Enquiries = () => {

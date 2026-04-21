@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { BarChart3, Save, RotateCcw, AlertCircle, Plus, Trash2 } from 'lucide-react';
+import { useState } from 'react';
+import { Save, RotateCcw, AlertCircle, Plus, Trash2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const RateChart = () => {
-  const [rates, setRates] = useState([
+  const [rates] = useState([
     { id: 1, fat: 4.0, snf87: 32.5, snf88: 33.2, snf89: 34.0, snf90: 35.5 },
     { id: 2, fat: 4.2, snf87: 34.1, snf88: 34.8, snf89: 35.6, snf90: 37.1 },
     { id: 3, fat: 4.4, snf87: 35.7, snf88: 36.4, snf89: 37.2, snf90: 38.7 },

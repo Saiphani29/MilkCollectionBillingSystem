@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Milk, User, Calendar, Clock, Droplets, Thermometer, Layers, CheckCircle2 } from 'lucide-react';
+import { Milk, User, Droplets, Thermometer, Layers, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MilkCollection = () => {

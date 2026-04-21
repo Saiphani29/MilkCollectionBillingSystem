@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { User, Mail, Phone, MapPin, Shield, Camera, Save, Key } from 'lucide-react';
+import { useState } from 'react';
+import { User, Shield, Camera, Save, Key } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const UserProfile = ({ isAdmin }: { isAdmin: boolean }) => {

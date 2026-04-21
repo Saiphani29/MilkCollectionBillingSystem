@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Plus, Filter, MoreVertical, Edit2, Trash2, Mail, Phone, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, Plus, Filter, Edit2, Trash2, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import api from '../utils/api';
 
